@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+html {
+  @media (max-width: $screen-sm-max) {
+    font-size: $font-size-base - 1;
+  }
+}
+
+//----------------------------------------------
+body {
+  position: relative;// fix for parent <html> tag width is smaller than body tag.
+  min-width: 375px;// iPhone6
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 1rem;
+  }
+}
+
+//----------------------------------------------
+.sans-serif {
+  font-family: $font-family-sans-serif;
+}
+
+.serif {
+  font-family: $font-family-serif;
+}
+
+//----------------------------------------------
+a {
+  &,
+  img {
+    @include transition(all $hover-transition-speed ease);
+  }
+
+  &.underline {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.hover {
+    &:hover {
+      @include opacity(.8);
+    }
+  }
+
+  &.hover-img {
+    &:hover {
+      img {
+        @include opacity(.8);
+      }
+    }
+  }
+
+  .img-responsive {
+    display: inline-block;
+  }
+}
+
+//----------------------------------------------
+.both-side-slash {
+  $width: 32px;
+
+  position: relative;
+  display: inline-block;
+  padding-right: $width + 30;
+  padding-left: $width + 30;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: $width;
+    height: 49px;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: "";
+  }
+
+  &:before {
+    left: 0;
+    background: url("../img/common/slash-left.png") no-repeat 0 0;
+  }
+
+  &:after {
+    right: 0;
+    background: url("../img/common/slash-right.png") no-repeat 100% 0;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+//----------------------------------------------
+// For responsive
+@mixin google-map-container {
+  position: relative;
+  height: 0;
+  padding-top: 30px;
+  padding-bottom: 30%;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.google-map-container {
+  @include google-map-container();
+}
+
+.google-map-container-xs {
+  @media (max-width: $screen-xs-max) {
+    @include google-map-container();
+    padding-bottom: 60%;
+  }
+}
+
+//----------------------------------------------
+img {
+  &.width-100p {
+    width: 100% !important;
+  }
+}

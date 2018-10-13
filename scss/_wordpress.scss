@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+.alignnone,
+.alignleft,
+.alignright {
+  @include img-responsive();
+}
+
+.alignleft {
+  @include center-block;
+  display: block;
+  margin-bottom: 1em;
+
+  @media (min-width: $screen-xs-min) {
+    float: left;
+    margin-right: 15px;
+  }
+}
+
+.alignright {
+  @include center-block;
+  display: block;
+  margin-bottom: 1em;
+
+  @media (min-width: $screen-xs-min) {
+    float: right;
+    margin-left: 15px;
+  }
+}
+
+//----------------------------------------------
+.screen-reader-text {
+  display: none;
+}
+
+//----------------------------------------------
+.editor-area {
+  min-width: 0;
+  margin: 10px;
+  background-color: transparent;
+  border-top: 0;
+  border-bottom: 0;
+
+  img {
+    max-width: none;
+  }
+}
+
+//----------------------------------------------
+.post-thumbnail {
+  @media (min-width: $screen-xs-min) {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    @include center-block;
+  }
+}
+
+//----------------------------------------------
+.entry-title {
+  margin-top: 0;
+}
+
+//----------------------------------------------
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+//----------------------------------------------
+.entry-date {
+  margin-right: 10px;
+}

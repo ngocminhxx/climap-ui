@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+.label {
+  display: inline-block;
+  padding: .5em .6em .3em;
+  font-size: $font-size-base;
+  font-weight: normal;
+
+  &.has-space {
+    margin-bottom: 3px;
+  }
+}
+
+//----------------------------------------------
+.label-container {
+  .label {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+//----------------------------------------------
+.label-border-gray {
+  color: #000;
+  border: 1px solid #9b9b9b;
+
+  &:hover {
+    background-color: #595757;
+    border: 1px solid #9b9b9b;
+  }
+}
+
+//----------------------------------------------
+.label-blue {
+  @include label-variant(#355ea6);
+  padding: 6px 6px 4px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 4px 3px 2px;
+    font-size: 10px;
+  }
+}
+
+//----------------------------------------------
+.label-required {
+  @include label-variant(#f00);
+  vertical-align: 2px;
+}

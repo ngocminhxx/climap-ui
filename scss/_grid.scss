@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+@mixin row-variant($parent, $grid-gutter-width) {
+  #{$parent} {
+    margin-right: -$grid-gutter-width;
+    margin-left: -$grid-gutter-width;
+
+    > div {
+      padding-right: $grid-gutter-width;
+      padding-left: $grid-gutter-width;
+    }
+  }
+}
+
+//----------------------------------------------
+@include row-variant(".row-0", 0);
+@include row-variant(".row-5", 5px);
+@include row-variant(".row-10", 10px);
+
+//----------------------------------------------
+@media (max-width: $screen-xs-max) {
+  @include row-variant(".row-5-xs", 5px);
+}
+
+//----------------------------------------------
+// gutter class has only padding left & right.
+//
+.gutter-15 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+//----------------------------------------------
+.gutter-0-xs {
+  @media (max-width: $screen-xs-max) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.gutter-0-sm {
+  @media (max-width: $screen-sm-max) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+//----------------------------------------------
+.col-base {
+  position: relative;
+  min-height: 1px;
+  padding-right: floor(($grid-gutter-width / 2));
+  padding-left: ceil(($grid-gutter-width / 2));
+}
+
+//----------------------------------------------
+.col-xs-15 {
+  float: left;
+  width: 20%;
+}
+
+@media (min-width: $screen-sm-min) {
+  .col-sm-15 {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .col-md-15 {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .col-lg-15 {
+    float: left;
+    width: 20%;
+  }
+}
+
+//----------------------------------------------
+.col-sidebar,
+.col-main {
+  position: relative;
+  padding-right: floor(($grid-gutter-width / 2));
+  padding-left: ceil(($grid-gutter-width / 2));
+  margin-top: 60px;
+}
+
+//----------------------------------------------
+.col-sidebar {
+  @media (min-width: $screen-sm-min) {
+    right: 70%;
+    float: left;
+    width: 30%;
+    padding-right: 15px;
+  }
+}
+
+//----------------------------------------------
+.col-main {
+  @media (min-width: $screen-sm-min) {
+    left: 30%;
+    float: left;
+    width: 70%;
+  }
+}
+
+//
+// custom column
+// --------------------------------------------------
+@media (min-width: $screen-sm-min) {
+  .col-sm-524 {
+    float: left;
+    width: 52.4%;
+  }
+
+  .col-sm-476 {
+    float: left;
+    width: 47.6%;
+  }
+}

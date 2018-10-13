@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+.box-shadow-yellow {
+  box-shadow: 0 0 30px 15px rgba(255, 255, 0, 1);// offset-x | offset-y | blur-radius | spread-radius | color
+}
+
+.box-shadow-yellow-spread-sm {
+  box-shadow: 0 0 30px 0 rgba(255, 255, 0, 1);
+}
+
+.box-shadow-yellow-spread-lg {
+  box-shadow: 0 0 30px 20px rgba(255, 255, 0, 1);
+}

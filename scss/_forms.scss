@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+//----------------------------------------------
+label {
+  cursor: pointer;
+
+  &.error {
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #fff;
+    cursor: default;
+    background-color: #f00;
+  }
+}
+
+//----------------------------------------------
+select {
+  cursor: pointer;
+}
+
+//----------------------------------------------
+.container-form {
+  .list-inline {
+    margin-bottom: 0;
+    margin-left: -10px;
+
+    li {
+      margin-right: 10px;
+      margin-left: 10px;
+
+      @media (max-width: $screen-xxs-max) {
+        display: block;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+.form-horizontal {
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+      text-align: left;
+    }
+  }
+}
+
+//----------------------------------------------
+.form-inline {
+  .form-control {
+    vertical-align: 1px;
+  }
+}
+
+//----------------------------------------------
+.form-inline-force {
+  .form-control {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    // vertical-align: 1px;
+  }
+}
+
+//----------------------------------------------
+textarea {
+  height: auto !important;
+  line-height: 1.4 !important;
+}

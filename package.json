@@ -1,0 +1,52 @@
+{
+    "private": true,
+    "scripts": {
+        "commitmsg": "lint-message -e $GIT_PARAMS",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "**/*.@(html|php)": [
+            "htmllint --rc config/.htmllintrc-indent",
+            "htmllint --rc config/.htmllintrc"
+        ],
+        "@(scss|css)/**/*.@(scss|css)": [
+            "scss-css-pair-lint"
+        ],
+        "scss/**/*.scss": [
+            "sass-lint -v -q -c config/.sass-lint.yml",
+            "stylelint --config config/.stylelintrc"
+        ],
+        "img/**/*": [
+            "file-name-lint"
+        ]
+    },
+    "devDependencies": {
+        "del": "^3.0.0",
+        "file-name-lint": "git+https://github.com/regepan/file-name-lint.git",
+        "fs": "0.0.1-security",
+        "gulp": "^3.9.1",
+        "gulp-bootlint": "git+https://github.com/regepan/gulp-bootlint.git",
+        "gulp-clean-css": "^3.9.4",
+        "gulp-ejs": "^3.1.3",
+        "gulp-htmllint": "0.0.15",
+        "gulp-if": "^2.0.2",
+        "gulp-notify": "^3.2.0",
+        "gulp-postcss": "^7.0.1",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "htmllint-cli": "0.0.7",
+        "husky": "^0.14.3",
+        "lint-message": "git+https://github.com/regepan/lint-message.git",
+        "lint-staged": "^7.2.0",
+        "minimist": "^1.2.0",
+        "mysql": "^2.16.0",
+        "mysql-import": "^1.0.9",
+        "run-sequence": "^2.2.1",
+        "sass-lint": "^1.12.1",
+        "scss-css-pair-lint": "git+https://github.com/regepan/scss-css-pair-lint.git",
+        "stylelint": "^9.3.0",
+        "stylelint-config-standard": "^18.2.0",
+        "stylelint-order": "^0.8.1",
+        "stylelint-plugins": "git+https://github.com/regepan/stylelint-plugins.git"
+    }
+}
