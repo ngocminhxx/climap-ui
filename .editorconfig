@@ -1,15 +1,23 @@
-[*.{html,htm,php,json,ejs}]
-indent_style = space
-indent_size = 4
-
-[*.scss]
-indent_style = space
-indent_size = 2
-
 [*.js]
 indent_style = space
 indent_size = 2
 
-[.{*rc,stylelintrc-css}]
+[*.{html,htm}]
+indent_style = space
+indent_size = 4
+
+[*.php]
+indent_style = space
+indent_size = 4
+
+[*.ejs]
+indent_style = space
+indent_size = 4
+
+[.{stylelintrc,stylelintrc-css,htmllintrc,json}]
+indent_style = space
+indent_size = 4
+
+[*.json]
 indent_style = space
 indent_size = 4

@@ -1,11 +1,7 @@
-# https://git-scm.com/docs/gitignore
-# For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b
-
 .DS_Store
 Thumbs.db
 node_modules
+package-lock.json
 *.css.map
 .idea
 .bower.json
-*.rej
-npm-debug.log
