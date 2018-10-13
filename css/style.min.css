@@ -28910,7 +28910,7 @@ mark {
 .v-middle {
   vertical-align: middle!important
 }
-body {
+.for-nav-fixed {
   padding-top: 150px
 }
 .header.fixed {
@@ -28928,9 +28928,33 @@ body {
   margin-bottom: 20px;
   background-color: #fff
 }
+@media (max-width:767px) {
+  .text-shadow-outline-blurred-black {
+    text-shadow: 1px 1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px 0 0 #000,0 1px 0 #000,-1px 0 0 #000,0 -1px 0 #000,1px 2px 1px #000,1px -2px 1px #000,-1px 2px 1px #000,-1px -2px 1px #000,2px 0 1px #000,0 2px 1px #000,-2px 0 1px #000,0 -2px 1px #000
+  }
+  .for-nav-fixed {
+    padding-top: 121px
+  }
+  .header.fixed {
+    padding-bottom: 5px
+  }
+  .ui.text.menu {
+    margin-top: 10px;
+    margin-bottom: 10px
+  }
+}
 .container-map,
 .container-map .ui.embed {
   height: 100vh
+}
+.container-img {
+  display: table;
+  padding: 0 5%;
+  background-color: #000
+}
+.container-img .inner {
+  display: table-cell;
+  vertical-align: middle
 }
 .media.media-text-float .media-body,
 .media.media-text-float .media-left,
@@ -28948,19 +28972,6 @@ body {
   overflow: visible
 }
 @media (max-width:767px) {
-  .text-shadow-outline-blurred-black {
-    text-shadow: 1px 1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px 0 0 #000,0 1px 0 #000,-1px 0 0 #000,0 -1px 0 #000,1px 2px 1px #000,1px -2px 1px #000,-1px 2px 1px #000,-1px -2px 1px #000,2px 0 1px #000,0 2px 1px #000,-2px 0 1px #000,0 -2px 1px #000
-  }
-  body {
-    padding-top: 121px
-  }
-  .header.fixed {
-    padding-bottom: 5px
-  }
-  .ui.text.menu {
-    margin-top: 10px;
-    margin-bottom: 10px
-  }
   .media.media-cleared-xs .media,
   .media.media-cleared-xs .media-body {
     overflow: visible

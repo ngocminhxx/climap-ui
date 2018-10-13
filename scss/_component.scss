@@ -1,6 +1,6 @@
 @charset "UTF-8";
 //----------------------------------------------
-body {
+.for-nav-fixed {
   padding-top: 150px;
 
   @media (max-width: $screen-xs-max) {
@@ -50,5 +50,17 @@ body {
     &.embed {
       height: 100vh;
     }
+  }
+}
+
+//----------------------------------------------
+.container-img {
+  display: table;
+  padding: 0 5%;
+  background-color: #000;
+
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
