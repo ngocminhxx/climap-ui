@@ -60,6 +60,23 @@
   color: #fff;
   background-color: #000;
 
+  @media (min-width: $screen-md-min) {
+    height: 100%;
+    width: 630px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    height: auto !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .inner {
     display: table-cell;
     vertical-align: middle;
@@ -69,10 +86,19 @@
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 10px;
+      font-size: 15px;
+    }
   }
 
   .caption {
     margin-top: 20px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -80,9 +106,17 @@
 .container-comment {
   padding: 5% 5% 0;
 
+  @media (min-width: $screen-md-min) {
+    margin-left: 630px;
+  }
+
   .ui {
     &.form {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -95,6 +129,10 @@
 
   textarea {
     margin-bottom: 20px;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 10px;
+    }
   }
 
   .comment {
@@ -103,8 +141,22 @@
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 
+    @media (max-width: $screen-xs-max) {
+      padding: 15px 0;
+      font-size: 13px;
+    }
+
     + .comment {
       border-top: 0;
     }
+  }
+}
+
+//----------------------------------------------
+.add-tag {
+  margin-bottom: 20px;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 15px;
   }
 }

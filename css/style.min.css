@@ -28953,6 +28953,21 @@ mark {
   color: #fff;
   background-color: #000
 }
+@media (min-width:992px) {
+  .container-img {
+    height: 100%;
+    width: 630px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden
+  }
+  .container-comment {
+    margin-left: 630px
+  }
+}
 .container-img .inner {
   display: table-cell;
   vertical-align: middle
@@ -28962,6 +28977,20 @@ mark {
   font-size: 20px;
   font-weight: 700
 }
+@media (max-width:991px) {
+  .text-center-sm {
+    text-align: center!important
+  }
+  .container-img {
+    height: auto!important;
+    padding-top: 20px;
+    padding-bottom: 20px
+  }
+  .container-img .title {
+    margin-top: 10px;
+    font-size: 15px
+  }
+}
 .container-img .caption {
   margin-top: 20px
 }
@@ -28969,7 +28998,7 @@ mark {
   padding: 5% 5% 0
 }
 .container-comment .ui.form {
-  margin-bottom: 25px
+  margin-bottom: 20px
 }
 .container-comment .title-comment {
   padding-bottom: 10px;
@@ -28989,6 +29018,9 @@ mark {
 .container-comment .comment + .comment {
   border-top: 0
 }
+.add-tag {
+  margin-bottom: 20px
+}
 .media.media-text-float .media-body,
 .media.media-text-float .media-left,
 .media.media-text-float .media-right {
@@ -29005,6 +29037,19 @@ mark {
   overflow: visible
 }
 @media (max-width:767px) {
+  .container-comment .ui.form {
+    margin-bottom: 15px
+  }
+  .container-comment textarea {
+    margin-bottom: 10px
+  }
+  .container-comment .comment {
+    padding: 15px 0;
+    font-size: 13px
+  }
+  .add-tag {
+    margin-bottom: 15px
+  }
   .media.media-cleared-xs .media,
   .media.media-cleared-xs .media-body {
     overflow: visible
@@ -29032,8 +29077,8 @@ mark {
   }
 }
 @media (max-width:991px) {
-  .text-center-sm {
-    text-align: center!important
+  .container-img .caption {
+    margin-top: 10px
   }
   .media.media-cleared-sm .media,
   .media.media-cleared-sm .media-body {
