@@ -28928,6 +28928,10 @@ body {
   margin-bottom: 20px;
   background-color: #fff
 }
+.container-map,
+.container-map .ui.embed {
+  height: 100vh
+}
 .media.media-text-float .media-body,
 .media.media-text-float .media-left,
 .media.media-text-float .media-right {
