@@ -57,10 +57,54 @@
 .container-img {
   display: table;
   padding: 0 5%;
+  color: #fff;
   background-color: #000;
 
   .inner {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .caption {
+    margin-top: 20px;
+  }
+}
+
+//----------------------------------------------
+.container-comment {
+  padding: 5% 5% 0;
+
+  .ui {
+    &.form {
+      margin-bottom: 25px;
+    }
+  }
+
+  .title-comment {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+  }
+
+  textarea {
+    margin-bottom: 20px;
+  }
+
+  .comment {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    + .comment {
+      border-top: 0;
+    }
   }
 }

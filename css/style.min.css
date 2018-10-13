@@ -28950,11 +28950,44 @@ mark {
 .container-img {
   display: table;
   padding: 0 5%;
+  color: #fff;
   background-color: #000
 }
 .container-img .inner {
   display: table-cell;
   vertical-align: middle
+}
+.container-img .title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700
+}
+.container-img .caption {
+  margin-top: 20px
+}
+.container-comment {
+  padding: 5% 5% 0
+}
+.container-comment .ui.form {
+  margin-bottom: 25px
+}
+.container-comment .title-comment {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc
+}
+.container-comment textarea {
+  margin-bottom: 20px
+}
+.container-comment .comment {
+  padding: 25px 0;
+  font-size: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc
+}
+.container-comment .comment + .comment {
+  border-top: 0
 }
 .media.media-text-float .media-body,
 .media.media-text-float .media-left,
