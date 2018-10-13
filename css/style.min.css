@@ -28951,6 +28951,16 @@ body {
   .text-shadow-outline-blurred-black {
     text-shadow: 1px 1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px 0 0 #000,0 1px 0 #000,-1px 0 0 #000,0 -1px 0 #000,1px 2px 1px #000,1px -2px 1px #000,-1px 2px 1px #000,-1px -2px 1px #000,2px 0 1px #000,0 2px 1px #000,-2px 0 1px #000,0 -2px 1px #000
   }
+  body {
+    padding-top: 121px
+  }
+  .header.fixed {
+    padding-bottom: 5px
+  }
+  .ui.text.menu {
+    margin-top: 10px;
+    margin-bottom: 10px
+  }
   .media.media-cleared-xs .media,
   .media.media-cleared-xs .media-body {
     overflow: visible

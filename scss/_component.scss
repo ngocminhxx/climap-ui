@@ -2,6 +2,10 @@
 //----------------------------------------------
 body {
   padding-top: 150px;
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: 121px;
+  }
 }
 
 //----------------------------------------------
@@ -16,6 +20,10 @@ body {
     z-index: 2;
     background-color: #fff;
     padding-bottom: 20px;
+
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -25,6 +33,11 @@ body {
     &.menu {
       margin-bottom: 20px;
       background-color: #fff;
+
+      @media (max-width: $screen-xs-max) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
