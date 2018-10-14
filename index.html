@@ -1,83 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="img/fav/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-  <link rel="manifest" href="img/fav/manifest.json">
-  <meta name="msapplication-TileColor" content="#fff000">
-  <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
-  <meta name="theme-color" content="#fff000">
+  <title>Custom Markers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: 100%;
+    }
 
-    <title>Climap</title>
-    <meta name="description" content="">
-
-
-    <link href="css/style.min.css?v=1" rel="stylesheet">
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
-<body class="for-nav-fixed">
-  <div class="header fixed">
-    <div class="ui container">
-      <div class="ui text menu">
-        <div class="item">
-          <img src="img/common/logo.png">
-        </div>
+<body>
+  <div id="map"></div>
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: new google.maps.LatLng(-33.91722, 151.23064),
+        mapTypeId: 'roadmap'
+      });
 
-        <div class="ui right dropdown item">
-          <div class="ui right aligned category search item">
-            <div class="ui transparent icon input">
-              <input class="prompt" placeholder="Tags" type="text">
-              <i class="search link icon"></i>
-            </div>
-            <div class="results"></div>
-          </div>
-        </div>
-      </div>
+      var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+      var icons = {
+        parking: {
+          // icon: iconBase + 'parking_lot_maps.png'
+          icon: "img/1.jpg"
+        },
+        library: {
+          // icon: iconBase + 'library_maps.png'
+          icon: "img/2.jpg"
+        },
+        info: {
+          // icon: iconBase + 'info-i_maps.png'
+          icon: "img/3.jpg"
+        }
+      };
 
-      <div class="ui fluid action input big">
-        <input placeholder="Search..." type="text">
-        <div class="ui button">Search</div>
-      </div>
-    </div>
-  </div>
+      var features = [
+        {
+          position: new google.maps.LatLng(-33.91721, 151.22630),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91539, 151.22820),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91747, 151.22912),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91910, 151.22907),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91725, 151.23011),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91872, 151.23089),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91784, 151.23094),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91682, 151.23149),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91790, 151.23463),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91666, 151.23468),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.916988, 151.233640),
+          type: 'info',
+          title: "1"
+        }, {
+          position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
+          type: 'parking',
+          title: "2"
+        }, {
+          position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+          type: 'library',
+          title: "3"
+        }
+      ];
 
-
-  <div class="container-map">
-    <div class="ui embed">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3705995876244!2d106.7026659140081!3d10.782901692317166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4942f39a93%3A0x638d023338a8d013!2zMjEgTmd1eeG7hW4gVHJ1bmcgTmfhuqFuLCBC4bq_biBOZ2jDqSwgUXXhuq1uIDEsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1539417552926" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-
-  </div>
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-<script src="components/bower_components/html5shiv/dist/html5shiv.min.js"></script>
-<script src="components/bower_components/respond/dest/respond.min.js"></script>
-<![endif]-->
-
-    <script src="components/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="components/bower_components/sematic-ui/js/semantic.min.js"></script>
-
-    <script src="components/bower_components/matchHeight/dist/jquery.matchHeight-min.js"></script>
-  <script type="text/javascript" id="susi-bot-script" data-userid="e5c9adb54f236b5bbf9c8e44ab693f82" data-group="Lifestyle" data-language="en" data-skill="MaiLife" src="https://skills.susi.ai/susi-chatbot.js" ></script>
-    <script src="js/main.js"></script>
+      // Create markers.
+      features.forEach(function (feature) {
+        var contentString = 'test <a target="_blank" rel="noopener noreferrer" href="image.html?title=' + feature.title + '">' +
+          'Check climate here</a>';
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = new google.maps.Marker({
+          position: feature.position,
+          icon: icons[feature.type].icon,
+          map: map,
+          title: icons[feature.type].title
+        });
+        marker.addListener('click', function () {
+          infowindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJqPuDbRGMWFx6pDkgsrv3U9Z12uxdtxo&callback=initMap">
+  </script>
 </body>
 
 </html>
