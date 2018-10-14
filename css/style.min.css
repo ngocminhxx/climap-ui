@@ -28973,6 +28973,7 @@ mark {
   vertical-align: middle
 }
 .container-img .title {
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 700
@@ -28983,7 +28984,7 @@ mark {
   }
   .container-img {
     height: auto!important;
-    padding-top: 70px;
+    padding-top: 35px;
     padding-bottom: 20px
   }
   .container-img .title {
@@ -29021,11 +29022,6 @@ mark {
 .add-tag {
   margin-bottom: 20px
 }
-.logo-absolute {
-  position: absolute;
-  top: 30px;
-  left: 20px
-}
 .media.media-text-float .media-body,
 .media.media-text-float .media-left,
 .media.media-text-float .media-right {
@@ -29054,9 +29050,6 @@ mark {
   }
   .add-tag {
     margin-bottom: 15px
-  }
-  .logo-absolute {
-    top: 10px
   }
   .media.media-cleared-xs .media,
   .media.media-cleared-xs .media-body {
