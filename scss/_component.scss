@@ -73,7 +73,7 @@
 
   @media (max-width: $screen-sm-max) {
     height: auto !important;
-    padding-top: 20px;
+    padding-top: 70px;
     padding-bottom: 20px;
   }
 
@@ -159,4 +159,15 @@
   @media (max-width: $screen-xs-max) {
     margin-bottom: 15px;
   }
+}
+
+//----------------------------------------------
+.logo-absolute {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+
+    @media (max-width: $screen-xs-max) {
+        top: 10px;
+    }
 }
