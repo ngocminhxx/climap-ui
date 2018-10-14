@@ -48,9 +48,9 @@
     </div>
   </div>
 
-  <div class="container-comment">
+  <form class="container-comment" action="http://192.168.119.134:9999/api/img" method="POST" enctype="multipart/form-data">
       <div class="ui fluid input">
-          <input type="text" placeholder="Paste image's link">
+          <input type="text" placeholder="Paste image's link" name="url">
       </div>
 
      <div class="browser-img">
@@ -59,35 +59,38 @@
      </div>
 
 
-      <div class="ui fluid input input-title-img">
+      <!-- <div class="ui fluid input input-title-img">
           <input type="text" placeholder="Location of picture">
       </div>
 
       <div class="ui fluid input input-title-img">
           <input type="text" placeholder="Add title's picture">
-      </div>
+      </div> -->
 
       <div class="ui form">
           <div class="field">
-              <textarea placeholder="Add a description" rows="4"></textarea>
+              <textarea placeholder="Add a description" rows="4" name="dsc"></textarea>
           </div>
       </div>
 
 
       <div class="ui right labeled left icon input add-tag">
           <i class="tags icon"></i>
-          <input type="text" placeholder="Enter tags">
+          <input type="text" placeholder="Enter tags" name="tag">
           <a class="ui tag label">
               Add Tag
           </a>
       </div>
+
+      <input type="hidden" value="10.786928" name="lat">
+      <input type="hidden" value="106.692507" name="lon">
 
       <div>
           <button class="ui inverted red button">Post</button>
       </div>
 
 
-  </div>
+  </form>
 
 
 

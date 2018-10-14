@@ -127,7 +127,8 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
   <script>
     $(document).ready(function () {
       debugger;
-      var img = '<img src=img/' + window.location.href.split("?title=")[1] + 'x.jpg alt="" class="ui fluid image centered"/>'
+      // var img = '<img src=img/' + window.location.href.split("?title=")[1] + 'x.jpg alt="" class="ui fluid image centered"/>'
+      var img = '<img src="' + window.location.href.split("?title=")[1] + '" alt="" class="ui fluid image centered"/>'
       $("#image-container").append(img);
     });
   </script>
