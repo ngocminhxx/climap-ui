@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Photo Gallery
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let photo of photoService.photos">
+        <img [src]="photoService._DomSanitizationService.bypassSecurityTrustUrl(photo.data)" (load)="loaded($event)" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-fab right bottom> -->
+  <button ion-button color="danger" icon-left (click)="photoService.uploadImage()" type="button">
+    <ion-icon name="cloud-upload"></ion-icon>
+    Upload
+  </button>
+  <!-- </ion-fab> -->
+
+
+  <ion-fab center bottom>
+    <button ion-fab (click)="photoService.takePic()">
+      <ion-icon name="camera"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

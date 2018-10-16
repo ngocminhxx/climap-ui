@@ -164,7 +164,7 @@
                        console.log(data);
                        // Create markers.
                         data.forEach(function (feature) {
-                            var contentString = 'test <a target="_blank" rel="noopener noreferrer" href="image.html?title=' + feature.url + '">' +
+                            var contentString = '<a target="_blank" rel="noopener noreferrer" href="image.html?title=' + feature.url + '">' +
                                 'Check climate here</a>';
                             var infowindow = new google.maps.InfoWindow({
                                 content: contentString
